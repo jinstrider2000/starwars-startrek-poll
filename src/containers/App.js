@@ -1,20 +1,22 @@
 import React, {Component} from 'react';
 import PollButton from '../components/PollButton';
-import logo from './logo.svg';
-import './App.css';
+const classNames = require('classnames');
+import '../assets/stylesheets/App.css';
 
 class App extends Component {
   
   constructor(props) {
     super(props);
-    this.state = {buttons: []};
+    state = {buttons }
   }
+
+  
 
   render() {
     return (
       <div id="poll-container">
-        <PollButton/>
-        <PollButton/>
+        <PollButton />
+        <PollButton />
       </div>
     );
   }
