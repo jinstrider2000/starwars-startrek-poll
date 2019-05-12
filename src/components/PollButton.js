@@ -1,23 +1,7 @@
-import React, {Component} from 'react';
-import './App.css';
+import React from 'react';
 
-
-class PollButton extends Component {
-  
-  constructor(props) {
-    super(props);
-    this.state = {clicked: false};
-  }
-
-  toogleClick = () => {
-    this.setState({clicked: !this.state.clicked});
-  }
-
-  render() {
-    return (
-      <button onClick={this.toogleClick}>{` ${this.props.choice} | ${''} `}</button>
-    );
-  }
+export default function PollButton(props) {
+  return (
+    <button id={`button-${props.index}`} className={props.classes} onClick={props.toogleButton.bind(null, props.index)}>{` ${props.choice} | ${props.clicks} `}</button>
+  );
 }
-
-export default PollButton;
