@@ -4,6 +4,7 @@ import '../assets/stylesheets/App.css';
 import starWarsLogo from '../assets/images/star_wars_logo.png';
 import starTrekLogo from '../assets/images/star_trek_logo.png';
 import vsLogo from '../assets/images/vs_logo.png';
+import gruntAudio from '../assets/audio/street_fighter_grunt.mp3'
 
 const classNames = require('classnames');
 
@@ -40,6 +41,7 @@ class App extends Component {
   render() {
     return (
       <div id="app-container">
+        <audio src={gruntAudio} autoPlay/>
         <header id="title">
           <div id="logo-container">
             <img id="star-wars-logo" className="logo" src={starWarsLogo} alt="Star Wars Logo"/>
