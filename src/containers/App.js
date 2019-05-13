@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import PollButton from '../components/PollButton';
 import '../assets/stylesheets/App.css';
+import starWarsLogo from '../assets/images/star_wars_logo.png';
+import starTrekLogo from '../assets/images/star_trek_logo.png';
+import vsLogo from '../assets/images/vs_logo.png';
 
 const classNames = require('classnames');
 
@@ -36,8 +39,17 @@ class App extends Component {
 
   render() {
     return (
-      <div id="poll-container">
-        {this.renderPollButtons()}
+      <div id="app-container">
+        <header id="title">
+          <div id="logo-container">
+            <img id="star-wars-logo" className="logo" src={starWarsLogo} alt="Star Wars Logo"/>
+            <img id="star-trek-logo" className="logo" src={starTrekLogo} alt="Star Trek Logo"/>
+          </div>
+          <img id="vs-logo" className="logo" src={vsLogo} alt="Vs Logo"/>
+        </header>
+        <div id="poll-container">
+          {this.renderPollButtons()}
+        </div>
       </div>
     );
   }
