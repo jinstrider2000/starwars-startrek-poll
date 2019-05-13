@@ -4,6 +4,8 @@ import '../assets/stylesheets/App.css';
 import starWarsLogo from '../assets/images/star_wars_logo.png';
 import starTrekLogo from '../assets/images/star_trek_logo.png';
 import vsLogo from '../assets/images/vs_logo.png';
+import starWarsReactions from '../assets/images/star_wars_reactions.png';
+import starTrekReactions from '../assets/images/star_trek_reactions.png'
 import gruntAudio from '../assets/audio/street_fighter_grunt.mp3'
 
 const classNames = require('classnames');
@@ -41,14 +43,19 @@ class App extends Component {
   render() {
     return (
       <div id="app-container">
-        <audio src={gruntAudio} autoPlay/>
+        <audio ref="audio_tag" src={gruntAudio} autoPlay/>
         <header id="title">
           <div id="logo-container">
             <img id="star-wars-logo" className="logo" src={starWarsLogo} alt="Star Wars Logo"/>
+            <img id="vs-logo" className="logo" src={vsLogo} alt="Vs Logo"/>
             <img id="star-trek-logo" className="logo" src={starTrekLogo} alt="Star Trek Logo"/>
           </div>
-          <img id="vs-logo" className="logo" src={vsLogo} alt="Vs Logo"/>
+          {/* <img id="vs-logo" className="logo" src={vsLogo} alt="Vs Logo"/> */}
         </header>
+        <div id="reaction-pics-container">
+            <div className="response-pics" style={{backgroundImage: `url("${starWarsReactions}")`}}></div>
+            <div className="response-pics" style={{backgroundImage: `url("${starTrekReactions}")`}}></div>
+          </div>
         <div id="poll-container">
           {this.renderPollButtons()}
         </div>

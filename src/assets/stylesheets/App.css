@@ -7,11 +7,15 @@ audio {
   width: 1200px;
 }
 
-#logo-container, #poll-container {
+#logo-container, #reaction-pics-container ,#poll-container {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+#reaction-pics-container {
+  margin-bottom: 30px;
 }
 
 #title {
@@ -19,8 +23,8 @@ audio {
 }
 
 #vs-logo {
-  top: -150px;
-  width: 200px;
+  top: 100px;
+  width: 120px;
   height: auto;
 }
 
@@ -28,7 +32,6 @@ audio {
   padding: 3px;
   font-size: 32px;
   border-radius: 10px;
-  margin-right: 50px;
   background-color: gainsboro;
 }
 
@@ -42,4 +45,12 @@ audio {
 
 .logo {
   position: relative;
+  width: 300px;
+  height: auto;
+}
+
+.response-pics {
+  width: 480px;
+  height: 480px;
+  background-image: url()
 }
