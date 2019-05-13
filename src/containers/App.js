@@ -50,7 +50,6 @@ class App extends Component {
             <img id="vs-logo" className="logo rotate-fast-and-grow" src={vsLogo} alt="Vs Logo"/>
             <img id="star-trek-logo" className="logo slide-in-from-right" src={starTrekLogo} alt="Star Trek Logo"/>
           </div>
-          {/* <img id="vs-logo" className="logo" src={vsLogo} alt="Vs Logo"/> */}
         </header>
         <div id="reaction-pics-container" className="fade-in">
           {this.state.buttons[0].selected ? <div className="response-pics" style={{backgroundImage: `url("${starWarsReactions}")`, backgroundPositionY: "480px"}}></div> : <div className="response-pics" style={{backgroundImage: `url("${starWarsReactions}")`}}></div>}
