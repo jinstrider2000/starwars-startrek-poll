@@ -46,17 +46,17 @@ class App extends Component {
         <audio ref="audio_tag" src={gruntAudio} autoPlay/>
         <header id="title">
           <div id="logo-container">
-            <img id="star-wars-logo" className="logo" src={starWarsLogo} alt="Star Wars Logo"/>
-            <img id="vs-logo" className="logo" src={vsLogo} alt="Vs Logo"/>
-            <img id="star-trek-logo" className="logo" src={starTrekLogo} alt="Star Trek Logo"/>
+            <img id="star-wars-logo" className="logo slide-in-from-left" src={starWarsLogo} alt="Star Wars Logo"/>
+            <img id="vs-logo" className="logo rotate-fast-and-grow" src={vsLogo} alt="Vs Logo"/>
+            <img id="star-trek-logo" className="logo slide-in-from-right" src={starTrekLogo} alt="Star Trek Logo"/>
           </div>
           {/* <img id="vs-logo" className="logo" src={vsLogo} alt="Vs Logo"/> */}
         </header>
-        <div id="reaction-pics-container">
-            <div className="response-pics" style={{backgroundImage: `url("${starWarsReactions}")`}}></div>
-            <div className="response-pics" style={{backgroundImage: `url("${starTrekReactions}")`}}></div>
-          </div>
-        <div id="poll-container">
+        <div id="reaction-pics-container" className="fade-in">
+          {this.state.buttons[0].selected ? <div className="response-pics" style={{backgroundImage: `url("${starWarsReactions}")`, backgroundPositionY: "480px"}}></div> : <div className="response-pics" style={{backgroundImage: `url("${starWarsReactions}")`}}></div>}
+          {this.state.buttons[1].selected ? <div className="response-pics" style={{backgroundImage: `url("${starTrekReactions}")`, backgroundPositionY: "480px"}}></div> : <div className="response-pics" style={{backgroundImage: `url("${starTrekReactions}")`}}></div>}
+        </div>
+        <div id="poll-container" className="fade-in">
           {this.renderPollButtons()}
         </div>
       </div>

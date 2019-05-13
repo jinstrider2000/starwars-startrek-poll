@@ -14,8 +14,17 @@ audio {
   justify-content: space-between;
 }
 
-#reaction-pics-container {
+#reaction-pics-container, #poll-container {
+  opacity: 0;
   margin-bottom: 30px;
+}
+
+#star-wars-logo {
+  left: -1200px;
+}
+
+#star-trek-logo {
+  right: -1200px;
 }
 
 #title {
@@ -33,6 +42,7 @@ audio {
   font-size: 32px;
   border-radius: 10px;
   background-color: gainsboro;
+  outline: none;
 }
 
 .button:hover {
@@ -52,5 +62,48 @@ audio {
 .response-pics {
   width: 480px;
   height: 480px;
-  background-image: url()
+}
+
+.slide-in-from-left {
+  animation: animate-slide-in-left 1s linear .25s forwards;
+}
+
+.slide-in-from-right {
+  animation: animate-slide-in-right 1s linear .25s forwards;
+}
+
+.rotate-fast-and-grow {
+  animation-name: animate-rotate-z-axis, animate-growth;
+  animation-duration: 1.15s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.fade-in {
+  animation: animate-fade-in 1s linear 1.25s forwards;
+}
+
+@keyframes animate-fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes animate-slide-in-left {
+  from {left: -1200px;}
+  to {left: 0px;}
+}
+
+@keyframes animate-slide-in-right {
+  from {right: -1200px;}
+  to {right: 0px;}
+}
+
+@keyframes animate-rotate-z-axis {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(360deg)}
+}
+
+@keyframes animate-growth {
+  from {width: 20px}
+  to {width: 120px}
 }
